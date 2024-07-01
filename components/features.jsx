@@ -10,7 +10,7 @@ export const Features = () => {
       <section className="max-w-[820px] mx-auto mt-40 flex flex-col items-center z-10">
         <div className="w-full flex flex-rowjustify-between text-start mb-32 z-10">
           <h1
-            className={`w-full text-6xl font-bold text-black ${dela.className}`}
+            className={`w-full text-5xl font-semibold text-black ${dela.className}`}
           >
             Features
           </h1>
