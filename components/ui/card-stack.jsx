@@ -17,9 +17,9 @@ const StackedCards = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`absolute w-[820px] h-72 bg-white border border-black/50 rounded-xl`}
+            className={`absolute w-[820px] h-72 bg-white/50  rounded-xl`}
             style={{
-              top: `${index * -25}px`,
+              top: `${index * -15}px`,
               opacity: 1 - index * 0.15,
               zIndex: -index,
               width: `${initialWidth - index * decrement}px`,
@@ -28,7 +28,7 @@ const StackedCards = () => {
             {index === 0 && (
               <div
                 id="CARD-CONTAINER"
-                className="overflow-x-auto scrollbar-hide flex flex-row gap-8 pl-8 py-12 bg-gradient-to-r from-[#314EE7] to-[#FE9C9C] rounded-xl h-full"
+                className="overflow-x-auto scrollbar-hide flex flex-row gap-8 px-8 py-12 bg-gradient-to-r from-[#314EE7] to-[#FE9C9C] rounded-xl h-full"
               >
                 <div
                   id="CARD-1"
@@ -139,8 +139,7 @@ const StackedCards = () => {
                       />
                     </div>
                     <div className="ml-7">
-
-                    <Image
+                      <Image
                         alt="box-10"
                         src={"/rectangle10.svg"}
                         width={64}

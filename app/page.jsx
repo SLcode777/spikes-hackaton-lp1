@@ -8,23 +8,15 @@ const dm = DM_Sans({ subsets: ["latin"] });
 
 export const fonts = { inter, dela, dm };
 
-const CARDS = [
-  "CARD1",
-  "CARD2",
-  "CARD3",
-  "CARD4",
-  "CARD5",
-  "CARD6",
-  "CARD7",
-  "CARD8",
-  "CARD9",
-  "CARD10",
-];
-
 export default function Home() {
   return (
-    <main className="mx-auto h-full min-w-screen flex flex-col justify-center text-center relative bg-white">
-      <section className=" z-10 flex flex-col h-full justify-center items-center bg-gradient-to-r from-white via-[rgb(249,207,199)] to-[#add2fc]/50">
+    <main className="mx-auto h-full min-w-screen flex flex-col justify-center text-center relative bg-[#F5F5F5]">
+      <section className="absolute inset-0 flex flex-row justify-center items-center">
+        <span class="absolute top-10 left-32 bg-[#f9cfc7]/85 rounded-full h-1/2 w-1/2 blur-3xl"></span>
+        <span class="absolute -top-72 left-1/2 bg-[#add2fc]/75 rounded-full h-1/2 w-1/3 blur-3xl"></span>
+        <span class="absolute top-2/4  bg-[#AE92FE]/75 rounded-full h-1/4 w-1/4 blur-3xl"></span>
+      </section>
+      <section className=" z-10 flex flex-col h-full justify-center items-center w ">
         <div className="z-10 flex flex-row items-center px-4 justify-between bg-[#282828] mt-10 h-10 w-1/2 text-white rounded-xl">
           <div className="flex flex-row gap-2">
             <Image src="./logo-sell.svg" alt="logo" width={20} height={20} />
@@ -84,11 +76,12 @@ export default function Home() {
           </div>
         </div>
         {/* <div className="flex flex-row min-w-screen h-screen"></div> */}
-        <div className="absolute inset-0 z-0 bottom-0 left-0 right-0 top-16 bg-[linear-gradient(to_right,#fef8f6_1px,transparent_1px),linear-gradient(to_bottom,#fef8f6_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_40%,transparent_80%)]"></div>
+        <div className="absolute inset-0 z-0 bottom-0 left-0 right-0 top-16 bg-[linear-gradient(to_right,#fef8f6_1px,transparent_1px),linear-gradient(to_bottom,#fef8f6_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_0%,#000_20%,transparent_90%)]"></div>
       </section>
       <section className="mt-30 z-10 ">
-        <StackedCards ></StackedCards>
+        <StackedCards></StackedCards>
       </section>
+      <section className="h-72">test</section>
     </main>
   );
 }
