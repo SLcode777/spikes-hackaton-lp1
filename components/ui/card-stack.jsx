@@ -153,7 +153,7 @@ const StackedCards = () => {
                   <div className="flex flex-row justify-left px-4 py-2">
                     <Image
                       alt="vector"
-                      src={"/vector.svg"}
+                      src={"/Vector.svg"}
                       width={270}
                       height={80}
                     />
