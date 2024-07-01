@@ -7,17 +7,17 @@ const dela = Dela_Gothic_One({ subsets: ["latin"], weight: "400" });
 export const Features = () => {
   return (
     <>
-      <section className="max-w-[820px] mx-auto mt-40 flex flex-col items-center z-20">
-        <div className="w-full flex flex-rowjustify-between text-start mb-32">
+      <section className="max-w-[820px] mx-auto mt-40 flex flex-col items-center z-10">
+        <div className="w-full flex flex-rowjustify-between text-start mb-32 z-10">
           <h1
             className={`w-full text-6xl font-bold text-black ${dela.className}`}
           >
             Features
           </h1>
-          <div className="flex flex-col items-center justify-center ">
+          {/* <div className="flex flex-col items-center justify-center ">
 
           <button className="px-4 py-4 rounded-lg bg-[#314ee7] z-10 text-white font-medium w-36">Try for free</button>
-          </div>
+          </div> */}
         </div>
         <div className="grid grid-cols-2 gap-4 gap-y-20 max-w-1/2 mx-auto justify-between">
           <BackgroundGradient className="rounded-[22px] h-full p-4  bg-white ">
