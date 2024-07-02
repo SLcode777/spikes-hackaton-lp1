@@ -1,9 +1,10 @@
 "use client";
 
-import { React } from "react";
+import { React, useRef } from "react";
 import Image from "next/image";
-import { Inter, Dela_Gothic_One, DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const StackedCards = () => {
   const cards = [1, 2, 3, 4];
@@ -11,9 +12,15 @@ const StackedCards = () => {
   const initialWidth = 780; // Largeur initiale de la première carte
   const decrement = 20; // Décrément de largeur par index
 
+  const ref = useRef();
+
+  const scroll = (scrollOffset) => {
+    ref.current.scrollBy({left: scrollOffset, behavior: 'smooth'});
+  };
+
   return (
     <>
-      <div className="relative w-full mt-24 h-64 flex justify-center  items-center">
+      <div className="relative  mt-24 h-64 flex justify-center  items-center">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -28,14 +35,21 @@ const StackedCards = () => {
             {index === 0 && (
               <div
                 id="CARD-CONTAINER"
+                ref={ref}
                 className="overflow-x-auto scrollbar-hide flex flex-row gap-8 px-8 py-12 bg-gradient-to-r from-[#314EE7] to-[#FE9C9C] rounded-xl h-full"
               >
+                <div
+                  className="absolute -left-8 top-32 hover:cursor-pointer hover:-translate-x-1"
+                  onClick={() => scroll(-300)}
+                >
+                  <ChevronLeft />
+                </div>
                 <div
                   id="CARD-1"
                   className="h-full w-72 flex-shrink-0 rounded-xl bg-white"
                 >
                   <h1
-                    className={` px-4 mt-4  tracking-tight text-md font-medium ${inter.className}`}
+                    className={` px-4 mt-4 text-center tracking-tight text-md mb-2 font-semibold ${inter.className}`}
                   >
                     Manage your store
                   </h1>
@@ -158,6 +172,12 @@ const StackedCards = () => {
                       height={80}
                     />
                   </div>
+                </div>
+                <div
+                  className="absolute -right-8 top-32 hover:cursor-pointer hover:translate-x-1"
+                  onClick={() => scroll(300)}
+                >
+                  <ChevronRight />
                 </div>
               </div>
             )}

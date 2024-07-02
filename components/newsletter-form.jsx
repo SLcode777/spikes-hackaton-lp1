@@ -19,7 +19,7 @@ export const NewsletterForm = () => {
           />
           <button
             type="submit"
-            className="px-4 py-4 rounded-lg bg-[#314ee7] z-10 text-white font-medium w-36"
+            className="px-4 py-4 rounded-lg bg-[#314ee7] hover:bg-[#e291a7] z-10 text-white font-medium w-36"
           >
             Join Waitlist
           </button>

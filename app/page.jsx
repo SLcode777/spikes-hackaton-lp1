@@ -13,9 +13,9 @@ export const fonts = { inter, dela, dm };
 
 export default function Home() {
   return (
-    <main className="mx-auto h-full min-w-screen flex flex-col justify-center text-center relative bg-[#F5F5F5]">
+    <main className="mx-auto h-full min-w-screen flex flex-col justify-center items-centertext-center relative bg-[#F5F5F5]">
       <HeroSection />
-      <section className="my-30 z-10 ">
+      <section className=" z-10 flex flex-row items-center justify-center ">
         <StackedCards />
       </section>
       <section className="mb-40">
@@ -24,9 +24,9 @@ export default function Home() {
       <section>
         <NewsletterForm />
       </section>
-        <section>
-          <Footer />
-        </section>
+      <section>
+        <Footer />
+      </section>
     </main>
   );
 }
