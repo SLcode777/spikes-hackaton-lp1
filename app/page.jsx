@@ -1,5 +1,6 @@
 import { Inter, Dela_Gothic_One, DM_Sans } from "next/font/google";
 import StackedCards from "@/components/ui/card-stack";
+import StackedCardsMobile from "@/components/ui/card-stack-mobile";
 import { Features } from "@/components/features";
 import { HeroSection } from "@/components/hero-section";
 import { NewsletterForm } from "@/components/newsletter-form";
@@ -16,7 +17,8 @@ export default function Home() {
     <main className="mx-auto h-full min-w-screen flex flex-col justify-center items-centertext-center relative bg-[#F5F5F5]">
       <HeroSection />
       <section className=" z-10 flex flex-row items-center justify-center ">
-        <StackedCards />
+        <StackedCards  />
+        <StackedCardsMobile />
       </section>
       <section className="mb-40">
         <Features />

@@ -6,10 +6,10 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const StackedCards = () => {
+const StackedCardsMobile = () => {
   const cards = [1, 2, 3, 4];
 
-  const initialWidth = 780; // Largeur initiale de la première carte
+  const initialWidth = 360; // Largeur initiale de la première carte
   const decrement = 20; // Décrément de largeur par index
 
   const ref = useRef();
@@ -20,11 +20,11 @@ const StackedCards = () => {
 
   return (
     <>
-      <div className="hidden relative  mt-24 h-64 lg:flex justify-center  items-center">
+      <div className="relative  mt-24 h-64 flex lg:hidden justify-center  items-center">
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`absolute lg:w-[820px] h-72 bg-white/50  rounded-xl`}
+            className={`absolute  h-96 bg-white/50  rounded-xl`}
             style={{
               top: `${index * -15}px`,
               opacity: 1 - index * 0.15,
@@ -36,17 +36,17 @@ const StackedCards = () => {
               <div
                 id="CARD-CONTAINER"
                 ref={ref}
-                className="lg:overflow-x-auto scrollbar-hide flex flex-col lg:flex-row gap-8 px-8 py-12 bg-gradient-to-r from-[#314EE7] to-[#FE9C9C] rounded-xl h-full  "
+                className="overflow-y-auto scrollbar-hide flex flex-col lg:flex-row gap-8 px-8 py-8 bg-gradient-to-r from-[#314EE7] to-[#FE9C9C] rounded-xl  "
               >
                 <div
                   className="absolute -left-8 top-32 hover:cursor-pointer hover:-translate-x-1"
                   onClick={() => scroll(-300)}
                 >
-                  <ChevronLeft />
+                  <ChevronLeft className="hidden lg:block" />
                 </div>
                 <div
                   id="CARD-1"
-                  className="h-full w-72 flex-shrink-0 rounded-xl bg-white"
+                  className="h-48 w-72 flex-shrink-0 rounded-xl bg-white"
                 >
                   <h1
                     className={` px-4 mt-4 text-center tracking-tight text-md mb-2 font-semibold ${inter.className}`}
@@ -100,7 +100,7 @@ const StackedCards = () => {
                 </div>
                 <div
                   id="CARD-2"
-                  className="h-full w-72 flex-shrink-0 rounded-xl flex-col bg-white "
+                  className="h-48 w-72 flex-shrink-0 rounded-xl flex-col bg-white "
                 >
                   <div className="flex flex-row justify-between p-4 mb-6">
                     <div className="flex flex-row items-center gap-2">
@@ -140,7 +140,7 @@ const StackedCards = () => {
                 </div>
                 <div
                   id="CARD-3"
-                  className="h-full w-72 flex-shrink-0 rounded-xl flex-col bg-white "
+                  className="h-48 w-72 flex-shrink-0 rounded-xl flex-col bg-white "
                 >
                   <div className="flex flex-row justify-between p-4 ">
                     <div className="flex flex-row items-center gap-2">
@@ -177,7 +177,7 @@ const StackedCards = () => {
                   className="absolute -right-8 top-32 hover:cursor-pointer hover:translate-x-1"
                   onClick={() => scroll(300)}
                 >
-                  <ChevronRight />
+                  <ChevronRight className="hidden lg:block" />
                 </div>
               </div>
             )}
@@ -188,4 +188,4 @@ const StackedCards = () => {
   );
 };
 
-export default StackedCards;
+export default StackedCardsMobile;

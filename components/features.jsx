@@ -7,8 +7,8 @@ const dela = Dela_Gothic_One({ subsets: ["latin"], weight: "400" });
 export const Features = () => {
   return (
     <>
-      <section className="max-w-[820px] mx-auto mt-40 flex flex-col items-center z-10">
-        <div className="w-full flex flex-rowjustify-between text-start mb-32 z-10">
+      <section className="max-w-[820px] mx-auto mt-[580px] lg:mt-40 flex flex-col items-center z-10">
+        <div className="w-full flex flex-rowjustify-between text-center lg:text-start mb-32 z-10">
           <h1
             className={`w-full text-5xl font-semibold text-black ${dela.className}`}
           >
@@ -19,7 +19,7 @@ export const Features = () => {
           <button className="px-4 py-4 rounded-lg bg-[#314ee7] z-10 text-white font-medium w-36">Try for free</button>
           </div> */}
         </div>
-        <div className="grid grid-cols-2 gap-4 gap-y-20 max-w-1/2 mx-auto justify-between">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 gap-y-20 max-w-1/2 mx-auto justify-between px-6 md:px-8 lg:px-0">
           <BackgroundGradient className="rounded-[22px] h-full p-4  bg-white ">
             <div className="flex flex-col gap-4 items-center">
               <Image

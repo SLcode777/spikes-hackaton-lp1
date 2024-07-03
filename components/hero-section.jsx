@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Dela_Gothic_One } from "next/font/google";
 
@@ -7,9 +9,9 @@ export const HeroSection = () => {
   return (
     <>
       <section className="absolute inset-0 flex flex-row justify-center items-center z-10">
-        <span class="absolute top-10 left-1/4 bg-[#f9cfc7]/85 rounded-full h-1/4 w-1/3 blur-3xl"></span>
-        <span class="absolute -top-72 left-1/2 bg-[#add2fc]/75 rounded-full h-1/4 w-1/3 blur-3xl"></span>
-        <span class="absolute top-1/4  bg-[#AE92FE]/75 rounded-full h-36 w-96 blur-3xl"></span>
+        <span className="absolute top-10 left-1/4 bg-[#f9cfc7]/85 rounded-full h-1/4 w-1/3 blur-3xl"></span>
+        <span className="absolute -top-72 left-1/2 bg-[#add2fc]/75 rounded-full h-1/4 w-1/3 blur-3xl"></span>
+        <span className="absolute top-1/4  bg-[#AE92FE]/75 rounded-full h-36 w-96 blur-3xl"></span>
       </section>
       <section className=" z-10 flex flex-col h-full justify-center items-center w ">
         <div className="max-w-[820px] z-10 flex flex-row items-center px-4 justify-between bg-[#282828] mt-10 h-10 w-1/2 text-white rounded-xl">
@@ -24,7 +26,15 @@ export const HeroSection = () => {
               width={16}
               height={16}
             ></Image>
-            <div className="text-sm">Follow us on Twitter</div>
+            <div
+              className="hidden md:block text-sm hover:text-[#45a4e1] hover:cursor-pointer"
+              onClick={() => window.open("https://x.com/StellaSLcode")}
+            >
+              Follow us on Twitter
+            </div>
+            <div className="block md:hidden text-sm hover:text-[#45a4e1] hover:cursor-pointer">
+              Twitter
+            </div>
           </div>
         </div>
         <div className="z-10 my-12">
@@ -33,14 +43,14 @@ export const HeroSection = () => {
           </div>
         </div>
         <h1
-          className={`z-10 text-black text-6xl leading-tight  ${dela.className}`}
+          className={`z-10 text-black text-3xl md:text-4xl lg:text-6xl leading-tight text-center  ${dela.className}`}
         >
           Best way to sell <br />
           your digital product
         </h1>
-        <p className="my-8 font-semibold text-xl z-10 text-[#626262]/90">
-          Go from Zero to Hero with simple platform that helps <br />
-          creators like you sell their digital products online.
+        <p className="my-8 font-semibold text-center text-lg md:text-xl z-10 text-[#626262]/90 max-w-[580px] px-4">
+          Go from Zero to Hero with simple platform that helps creators like you
+          sell their digital products online.
         </p>
         <div className="flex flex-row gap-2 z-10">
           <input
@@ -50,19 +60,25 @@ export const HeroSection = () => {
           />
           <button
             type="submit"
-            className="px-4 py-4 rounded-lg bg-[#314ee7] hover:bg-[#e291a7] z-10 text-white font-medium w-36"
+            className="hidden md:block px-4 py-4 rounded-lg bg-[#314ee7] hover:bg-[#e291a7] z-10 text-white font-medium w-36"
           >
             Try it out
+          </button>
+          <button
+            type="submit"
+            className="block md:hidden px-4 py-4 rounded-lg bg-[#314ee7] hover:bg-[#e291a7] z-10 text-white text-2xl font-medium w-16"
+          >
+            ➡
           </button>
         </div>
         <div className="my-6 gap-2 flex flex-row z-10">
           <Image src="./avatar-circles.svg" alt="logo" width={73} height={25} />
           <div className="flex flex-col">
-            <div className="flex flex-row gap-1">
-              <div className="font-semibold text-sm">More than 100+</div>
+            <div className="flex flex-col md:flex-row gap-1">
+              <div className="font-semibold text-sm">More than 100+ users</div>
               <div className="font-semibold text-sm text-black/50 ">
                 {" "}
-                users are selling their products
+                are selling their products
               </div>
             </div>
             <div className="font-semibold text-xs text-black/50 self-start">
